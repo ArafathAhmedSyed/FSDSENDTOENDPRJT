@@ -1,0 +1,233 @@
+[2024-01-21 00:40:54,329] 96 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2024-01-21 00:40:54,329] 96 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[2024-01-21 00:45:37,439] 96 werkzeug - INFO - 127.0.0.1 - - [21/Jan/2024 00:45:37] "GET / HTTP/1.1" 200 -
+[2024-01-21 00:45:37,552] 96 werkzeug - INFO - 127.0.0.1 - - [21/Jan/2024 00:45:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2024-01-21 01:04:06,147] 96 werkzeug - INFO - 127.0.0.1 - - [21/Jan/2024 01:04:06] "GET /predict HTTP/1.1" 200 -
+[2024-01-21 01:06:15,729] 96 werkzeug - INFO - 127.0.0.1 - - [21/Jan/2024 01:06:15] "GET /predict HTTP/1.1" 200 -
+[2024-01-21 01:06:19,155] 96 werkzeug - INFO - 127.0.0.1 - - [21/Jan/2024 01:06:19] "GET /predict HTTP/1.1" 200 -
+[2024-01-21 01:06:20,488] 96 werkzeug - INFO - 127.0.0.1 - - [21/Jan/2024 01:06:20] "GET /predict HTTP/1.1" 200 -
+[2024-01-21 01:06:27,668] 96 werkzeug - INFO - 127.0.0.1 - - [21/Jan/2024 01:06:27] "GET /predict HTTP/1.1" 200 -
+[2024-01-21 01:06:32,870] 828 app - ERROR - Exception on /predict [POST]
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\Lib\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\Lib\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\Lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\Lib\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\app.py", line 22, in predict_datapoint
+ValueError: could not convert string to float: ''
+[2024-01-21 01:06:32,878] 96 werkzeug - INFO - 127.0.0.1 - - [21/Jan/2024 01:06:32] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+[2024-01-21 01:11:09,785] 828 app - ERROR - Exception on /predict [POST]
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\Lib\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\Lib\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\Lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\Lib\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\app.py", line 22, in predict_datapoint
+    carat=float(request.form.get('carat')),
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: could not convert string to float: ''
+[2024-01-21 01:11:09,787] 96 werkzeug - INFO - 127.0.0.1 - - [21/Jan/2024 01:11:09] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+[2024-01-21 01:11:13,969] 96 werkzeug - INFO - 127.0.0.1 - - [21/Jan/2024 01:11:13] "GET /predict HTTP/1.1" 200 -
+[2024-01-21 01:11:43,833] 65 root - INFO - Dataframe Gathered
+[2024-01-21 01:11:43,834] 828 app - ERROR - Exception on /predict [POST]
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\Lib\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\Lib\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\Lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\Lib\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\app.py", line 35, in predict_datapoint
+    predict_pipeline=PredictPipeline()
+                     ^^^^^^^^^^^^^^^
+NameError: name 'PredictPipeline' is not defined
+[2024-01-21 01:11:43,836] 96 werkzeug - INFO - 127.0.0.1 - - [21/Jan/2024 01:11:43] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+[2024-01-21 01:20:08,037] 96 werkzeug - INFO - 127.0.0.1 - - [21/Jan/2024 01:20:08] "GET /predict HTTP/1.1" 200 -
+[2024-01-21 01:21:00,048] 65 root - INFO - Dataframe Gathered
+[2024-01-21 01:21:00,049] 828 app - ERROR - Exception on /predict [POST]
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\Lib\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\Lib\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\Lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\Lib\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\app.py", line 35, in predict_datapoint
+    predict_pipeline=PredictPipeline()
+                     ^^^^^^^^^^^^^^^
+NameError: name 'PredictPipeline' is not defined
+[2024-01-21 01:21:00,052] 96 werkzeug - INFO - 127.0.0.1 - - [21/Jan/2024 01:21:00] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+[2024-01-21 01:23:55,623] 96 werkzeug - INFO - 127.0.0.1 - - [21/Jan/2024 01:23:55] "GET /predict HTTP/1.1" 200 -
+[2024-01-21 01:24:36,461] 65 root - INFO - Dataframe Gathered
+[2024-01-21 01:24:36,461] 828 app - ERROR - Exception on /predict [POST]
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\Lib\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\Lib\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\Lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\Lib\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\app.py", line 35, in predict_datapoint
+    predict_pipeline=PreditctPipeline()
+                     ^^^^^^^^^^^^^^^
+NameError: name 'PredictPipeline' is not defined
+[2024-01-21 01:24:36,464] 96 werkzeug - INFO - 127.0.0.1 - - [21/Jan/2024 01:24:36] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+[2024-01-21 01:26:00,036] 65 root - INFO - Dataframe Gathered
+[2024-01-21 01:26:00,036] 828 app - ERROR - Exception on /predict [POST]
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\Lib\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\Lib\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\Lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\Lib\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\app.py", line 35, in predict_datapoint
+    predict_pipeline = PreditctPipeline
+                     ^^^^^^^^^^^^^^^
+NameError: name 'PredictPipeline' is not defined
+[2024-01-21 01:26:00,040] 96 werkzeug - INFO - 127.0.0.1 - - [21/Jan/2024 01:26:00] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+[2024-01-21 01:26:02,393] 96 werkzeug - INFO - 127.0.0.1 - - [21/Jan/2024 01:26:02] "GET /predict HTTP/1.1" 200 -
+[2024-01-21 01:26:31,524] 65 root - INFO - Dataframe Gathered
+[2024-01-21 01:26:31,525] 828 app - ERROR - Exception on /predict [POST]
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\Lib\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\Lib\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\Lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\Lib\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\app.py", line 35, in predict_datapoint
+    predict_pipeline = PreditctPipeline
+                     ^^^^^^^^^^^^^^^
+NameError: name 'PredictPipeline' is not defined
+[2024-01-21 01:26:31,528] 96 werkzeug - INFO - 127.0.0.1 - - [21/Jan/2024 01:26:31] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+[2024-01-21 01:27:26,957] 96 werkzeug - INFO - 127.0.0.1 - - [21/Jan/2024 01:27:26] "GET /predict HTTP/1.1" 200 -
+[2024-01-21 01:27:59,864] 65 root - INFO - Dataframe Gathered
+[2024-01-21 01:27:59,865] 828 app - ERROR - Exception on /predict [POST]
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\Lib\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\Lib\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\Lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\Lib\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\app.py", line 35, in predict_datapoint
+    predict_pipeline = PreditctPipeline
+                     ^^^^^^^^^^^^^^^
+NameError: name 'PredictPipeline' is not defined
+[2024-01-21 01:27:59,867] 96 werkzeug - INFO - 127.0.0.1 - - [21/Jan/2024 01:27:59] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+[2024-01-21 02:06:34,229] 96 werkzeug - INFO - 127.0.0.1 - - [21/Jan/2024 02:06:34] "GET /predict HTTP/1.1" 200 -
+[2024-01-21 02:06:54,632] 65 root - INFO - Dataframe Gathered
+[2024-01-21 02:06:54,632] 828 app - ERROR - Exception on /predict [POST]
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\Lib\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\Lib\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\Lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\Lib\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\app.py", line 35, in predict_datapoint
+    predict_pipeline = PreditctPipeline()
+                     ^^^^^^^^^^^^^^^
+NameError: name 'PredictPipeline' is not defined
+[2024-01-21 02:06:54,638] 96 werkzeug - INFO - 127.0.0.1 - - [21/Jan/2024 02:06:54] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+[2024-01-27 17:33:13,226] 65 root - INFO - Dataframe Gathered
+[2024-01-27 17:33:13,230] 828 app - ERROR - Exception on /predict [POST]
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\Lib\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\Lib\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\Lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\Lib\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\app.py", line 35, in predict_datapoint
+    predict_pipeline = PreditctPipeline()
+                     ^^^^^^^^^^^^^^^
+NameError: name 'PredictPipeline' is not defined
+[2024-01-27 17:33:13,247] 96 werkzeug - INFO - 127.0.0.1 - - [27/Jan/2024 17:33:13] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+[2024-01-27 17:33:16,235] 96 werkzeug - INFO - 127.0.0.1 - - [27/Jan/2024 17:33:16] "GET /predict HTTP/1.1" 200 -
+[2024-01-27 17:33:36,313] 65 root - INFO - Dataframe Gathered
+[2024-01-27 17:33:36,313] 828 app - ERROR - Exception on /predict [POST]
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\Lib\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\Lib\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\Lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\Lib\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\fsdsmendtoend-main-2\app.py", line 35, in predict_datapoint
+    predict_pipeline = PreditctPipeline()
+                     ^^^^^^^^^^^^^^^
+NameError: name 'PredictPipeline' is not defined
+[2024-01-27 17:33:36,318] 96 werkzeug - INFO - 127.0.0.1 - - [27/Jan/2024 17:33:36] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
